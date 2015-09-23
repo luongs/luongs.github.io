@@ -1,0 +1,9 @@
+/* Backgrounds
+----------------------------------------------*/
+.bg {
+  background-image: url('../images/bc_train.jpeg');
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 25em;
+  opacity:0.9;
+}
