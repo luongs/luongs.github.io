@@ -4,6 +4,13 @@
   background-image: url('../images/bc_train.jpeg');
   background-size: cover;
   color: #fff;
-  padding-bottom: 25em;
+  padding-bottom: 10em;
   opacity:0.9;
+}
+
+/* Text
+----------------------------------------------*/
+.center_text {
+	padding-top: 6rem;
+	text-align: center;
 }
