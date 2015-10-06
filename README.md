@@ -2,5 +2,7 @@ Personal Webpage
 
 Todo:
 Add links/icons to twitter, github, LinkedIn
-Add interactivity
+Add interactivity (js, emojis)
 Create Jekyll blog
+Add metadata for SEO
+
