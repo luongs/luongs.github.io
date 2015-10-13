@@ -20,7 +20,7 @@ body {
 	margin-bottom: 10rem;
 }
 
-.bg h4{
+.bg h4 {
 	padding: 2rem;
 }
 
@@ -33,12 +33,12 @@ body {
 }
 
 .bg span {
-  color: #46B482;
+  color: #3498db;
   font-size: 3.5em;
 }
 
 .bg span:hover {
-  color: #ffffff;
+  color: #c0392b;
   transition: color ease 1s;
 }
 /* Text
@@ -49,7 +49,7 @@ body {
 
 .projects {
 	background-color: #F8F8F8;
-	height: 100%;
+	height: 40%;
 	width:100%;
 	position: absolute;
 }
