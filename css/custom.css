@@ -38,13 +38,14 @@ body {
 }
 
 .bg span:hover {
-  color: #c0392b;
+  color: #2c3e50;
   transition: color ease 1s;
 }
 /* Text
 ----------------------------------------------*/
 .center_text {
 	padding-top: 6rem;
+	font-family: Merriweather;
 }
 
 .projects {
@@ -52,6 +53,10 @@ body {
 	height: 40%;
 	width:100%;
 	position: absolute;
+}
+
+.projects h6 {
+	text-align: left;
 }
 
 .projects i {
