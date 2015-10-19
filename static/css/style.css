@@ -60,6 +60,14 @@ body {
 	color: #e83a30;
 }
 
+.projects span {
+	cursor: default;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+	 user-select: none;
+}
+
 /* Media queries style
 ----------------------------------------------*/
 /* Skeleton handles most changes for screen size.
