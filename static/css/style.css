@@ -64,6 +64,10 @@ body {
 	color: #e83a30;
 }
 
+.projects #piranha {
+  margin-left: 5%;
+}
+
 .projects span {
 	cursor: default;
 	-webkit-user-select: none;
