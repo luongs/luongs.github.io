@@ -29,8 +29,8 @@ body {
 /* Description styles
 ----------------------------------------------*/
 
-.description {
-
+.description img{
+  margin-bottom: 2rem;
 }
 
 /* Media queries style
