@@ -1,0 +1,7 @@
+.palette canvas {
+  border: 1px solid black;
+}
+
+.palette i{
+  font-size: 2em;
+}
