@@ -22,7 +22,26 @@ canvas.onmousedown = function( e ){
   redraw();
 };
 
+canvas.ontouchstart = function( e ){
+  let mouseX = e.pageX - this.offsetLeft;
+  let mouseY = e.pageY - this.offsetTop;
+
+  paint = true;
+
+  addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, false);
+
+  redraw();
+};
+
 canvas.onmousemove = function( e ){
+  if(paint) {
+
+    addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+    redraw();
+  }
+};
+
+canvas.ontouchmove = function( e ){
   if(paint) {
 
     addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
@@ -35,6 +54,10 @@ canvas.onmouseup = function( e ){
 };
 
 canvas.onmouseleave = function( e ){
+  paint = false;
+};
+
+canvas.ontouchend = function( e ){
   paint = false;
 };
 
