@@ -6,7 +6,9 @@ let context = document.getElementById('canvasInAPerfectWorld').
 let canvas = document.getElementById('canvasInAPerfectWorld');
 let clearButton = document.getElementById('clearButton');
 let colorButton = document.getElementById('colorButton');
+let eraserButton = document.getElementById('eraserButton');
 let paint;
+let isEraser;
 
 canvas.onmousedown = function( e ){
   let mouseX = e.pageX - this.offsetLeft;
@@ -14,7 +16,8 @@ canvas.onmousedown = function( e ){
 
   paint = true;
 
-  addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, false);
+  addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop,
+            false, isEraser);
 
   redraw();
 };
@@ -22,7 +25,8 @@ canvas.onmousedown = function( e ){
 canvas.onmousemove = function( e ){
   if(paint) {
 
-    addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+    addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop,
+              true, isEraser);
     redraw();
   }
 };
@@ -47,6 +51,12 @@ colorArray = initColorArray(colorArray);
 
 colorButton.onclick = function ( e ){
   ccArrayIndex = incrementArrayIndex(ccArrayIndex, colorArray);
+  isEraser = false;
+};
+
+eraserButton.onclick = function( e ){
+  isEraser = true;
+  console.log("Click");
 };
 
 
@@ -55,16 +65,23 @@ let clickY = new Array();
 let clickDrag = new Array();
 let clickColor = new Array();
 
-//TODO: Add eraser function
+//TODO:
 //      Save canvas
 //      Display color combos on the side
 
-function addClick(x, y, dragging){
+function addClick(x, y, dragging, isEraser){
+  let color = '';
   clickX.push(x);
   clickY.push(y);
   clickDrag.push(dragging);
-  clickColor.push(getRandomColor(colorArray[ccArrayIndex]));
+  if (isEraser){
+    clickColor.push('#ffffff');
+  }
+  else{
+    clickColor.push(getRandomColor(colorArray[ccArrayIndex]));
+  }
 }
+
 
 function initColorArray(colorArray){
 
