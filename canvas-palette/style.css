@@ -7,6 +7,11 @@
   cursor: pointer;
 }
 
+.palette a{
+  color: black;
+}
+
 canvas:active {
   cursor: default;
 }
+

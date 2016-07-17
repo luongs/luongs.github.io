@@ -6,6 +6,7 @@ let context = document.getElementById('canvasInAPerfectWorld').
 let canvas = document.getElementById('canvasInAPerfectWorld');
 let clearButton = document.getElementById('clearButton');
 let colorButton = document.getElementById('colorButton');
+let saveButton = document.getElementById('saveButton');
 let eraserButton = document.getElementById('eraserButton');
 let paint;
 let isEraser;
@@ -39,11 +40,6 @@ canvas.onmouseleave = function( e ){
   paint = false;
 };
 
-clearButton.onclick = function( e ){
-  clearCanvas();
-  clearArrays();
-};
-
 let ccArrayIndex = 0; // index for clickColorArray
 let colorArray = [];
 
@@ -56,9 +52,18 @@ colorButton.onclick = function ( e ){
 
 eraserButton.onclick = function( e ){
   isEraser = true;
-  console.log("Click");
 };
 
+saveButton.onclick = function( e ){
+  let link = document.getElementById('saveAs');
+  link.href = canvas.toDataURL("image/png");
+  link.download = 'palettePicture.png';
+};
+
+clearButton.onclick = function( e ){
+  clearCanvas();
+  clearArrays();
+};
 
 let clickX = new Array();
 let clickY = new Array();
@@ -66,7 +71,6 @@ let clickDrag = new Array();
 let clickColor = new Array();
 
 //TODO:
-//      Save canvas
 //      Display color combos on the side
 
 function addClick(x, y, dragging, isEraser){
