@@ -11,7 +11,7 @@ let eraserButton = document.getElementById('eraserButton');
 let paint;
 let isEraser;
 
-canvas.onmousedown = function( e ){
+let onmousedown = function( e ){
   let mouseX = e.pageX - this.offsetLeft;
   let mouseY = e.pageY - this.offsetTop;
 
@@ -23,7 +23,10 @@ canvas.onmousedown = function( e ){
   redraw();
 };
 
-canvas.onmousemove = function( e ){
+canvas.addEventListener("mousedown", onmousedown);
+canvas.addEventListener("touchstart", onmousedown);
+
+let onmousemove = function( e ){
   if(paint) {
 
     addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop,
@@ -32,9 +35,15 @@ canvas.onmousemove = function( e ){
   }
 };
 
-canvas.onmouseup = function( e ){
+canvas.addEventListener("mousemove", onmousemove);
+canvas.addEventListener("touchmove", onmousemove);
+
+let onmouseup = function( e ){
   paint = false;
 };
+
+canvas.addEventListener("mouseup", onmouseup);
+canvas.addEventListener("touchend", onmouseup);
 
 canvas.onmouseleave = function( e ){
   paint = false;
