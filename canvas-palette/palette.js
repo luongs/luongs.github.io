@@ -145,7 +145,8 @@ function incrementArrayIndex(index, array){
 };
 
 function clearCanvas(){
-  context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+  context.fillStyle = "#ffffff";
+  context.fillRect(0, 0, context.canvas.width, context.canvas.height);
 }
 
 function clearArrays(){
