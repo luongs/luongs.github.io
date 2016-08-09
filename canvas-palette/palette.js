@@ -8,13 +8,18 @@ let clearButton = document.getElementById('clearButton');
 let colorButton = document.getElementById('colorButton');
 let saveButton = document.getElementById('saveButton');
 let eraserButton = document.getElementById('eraserButton');
+let undoButton = document.getElementById('undoButton');
+let undoNestedArray = [];
+let undoArray = [];
 let paint;
 let isEraser;
+
 
 let onmousedown = function( e ){
   let mouseX = e.pageX - this.offsetLeft;
   let mouseY = e.pageY - this.offsetTop;
 
+  undoArray.push(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
   paint = true;
 
   addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop,
@@ -29,6 +34,7 @@ canvas.addEventListener("touchstart", onmousedown);
 let onmousemove = function( e ){
   if(paint) {
 
+    undoArray.push(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
     addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop,
               true, isEraser);
     redraw();
@@ -39,6 +45,8 @@ canvas.addEventListener("mousemove", onmousemove);
 canvas.addEventListener("touchmove", onmousemove);
 
 let onmouseup = function( e ){
+  undoNestedArray.push(undoArray);
+  undoArray = [];
   paint = false;
 };
 
@@ -75,6 +83,10 @@ saveButton.onclick = function( e ){
 clearButton.onclick = function( e ){
   clearCanvas();
   clearArrays();
+};
+
+undoButton.onclick = function( e ){
+  undo();
 };
 
 let clickX = new Array();
@@ -154,6 +166,18 @@ function clearArrays(){
   clickY = [];
   clickDrag = [];
   clickColor = [];
+}
+
+function undo(){
+  if (undoNestedArray.length > 0){
+    let topUndoArr = undoNestedArray.pop();
+    for (let i=0; i<topUndoArr.length; i=i+2){
+      let x = topUndoArr[i];
+      let y = topUndoArr[i+1];
+      addClick(x, y, true, true);
+      redraw();
+    }
+  }
 }
 
 function redraw(){
