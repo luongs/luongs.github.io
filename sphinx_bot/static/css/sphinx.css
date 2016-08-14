@@ -1,0 +1,62 @@
+/* General Styles
+----------------------------------------------*/
+
+body {
+	text-align: left;
+	margin-top: 3rem;
+}
+
+/* Header styles
+----------------------------------------------*/
+.top {
+	margin-bottom: 5rem;
+}
+
+.top h2 {
+  margin-left: 10rem;
+  color: #E8A723;
+}
+
+.top img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+}
+
+.top h4 {
+	padding-bottom: 2rem;
+}
+
+/* Description styles
+----------------------------------------------*/
+
+.description img{
+  margin-bottom: 2rem;
+}
+
+/* Media queries style
+----------------------------------------------*/
+/* Skeleton handles most changes for screen size.
+ However custom css must be resized  */
+
+/* mobile only style */
+ @media(max-width: 500px){
+	 .projects {
+		height: 100%;
+	}
+ }
+
+/* tablet and split screen style */
+  @media(min-width: 501px){
+	 .projects {
+		height: 50%;
+	}
+ }
+
+/* desktop and laptop style  */
+ @media(min-width: 1024px){
+ 	.projects {
+ 		height: 40%;
+ 	}
+ }
+
