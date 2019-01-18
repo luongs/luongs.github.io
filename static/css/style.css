@@ -41,41 +41,6 @@ body {
   transition: color ease 1s;
 }
 
-/* Projects styles
-----------------------------------------------*/
-
-.projects {
-	padding-top: 2rem;
-	background-color: #F8F8F8;
-	height: 40%;
-	width:100%;
-	position: absolute;
-}
-
-.projects img {
-    height: 3rem;
-}
-
-.projects h6 {
-	text-align: left;
-}
-
-.projects i {
-	color: #e83a30;
-}
-
-#paintbrush {
-  color: #303841;
-}
-
-.projects span {
-	cursor: default;
-	-webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-	 user-select: none;
-}
-
 /* Media queries style
 ----------------------------------------------*/
 /* Skeleton handles most changes for screen size.
