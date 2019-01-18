@@ -15,7 +15,8 @@ body {
 
 .center_text {
 	padding-top: 6rem;
-	font-family: Montserrat;
+	font-family: 'Montserrat', sans-serif;
+  font-style: bold;
 }
 
 .top h4 {
