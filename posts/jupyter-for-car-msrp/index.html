@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="">
+<meta name="description"
+    content="I have recently stumbled on video lectures for python&amp;rsquo;s Jupyter library for data visualization on A Cloud Guru and decided to give it a try. I often wondered how the content in r/dataisbeautiful had been created, but also wanted to create and post interesting and meaningful insights from data.
+The course pointed me towards the pandas, matplotlib and seaborn library on python. Creating beautiful graphs was surprisingly easy on python. The course only scratched the surface when it came to the possibilities of those libraries, but did mention kaggle as a resource." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://luongs.github.io/posts/jupyter-for-car-msrp/" />
+
+
+<title>
+    
+    Jupyter for Car Msrp :: Sebastien Luong 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.1835008814d1eb8e32039c2fac8b2399d1bd22426ac2756053205d3e6b39e72c.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Jupyter for Car Msrp">
+<meta itemprop="description" content="I have recently stumbled on video lectures for python&rsquo;s Jupyter library for data visualization on A Cloud Guru and decided to give it a try. I often wondered how the content in r/dataisbeautiful had been created, but also wanted to create and post interesting and meaningful insights from data.
+The course pointed me towards the pandas, matplotlib and seaborn library on python. Creating beautiful graphs was surprisingly easy on python. The course only scratched the surface when it came to the possibilities of those libraries, but did mention kaggle as a resource.">
+
+
+<meta itemprop="datePublished" content="2020-07-04T16:24:16-07:00" />
+<meta itemprop="dateModified" content="2020-07-04T16:24:16-07:00" />
+<meta itemprop="wordCount" content="298">
+
+
+
+<meta itemprop="keywords" content="python,jupyter,pandas,seaborn,matplotlib,kaggle,data," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://luongs.github.io"/>
+
+<meta name="twitter:title" content="Jupyter for Car Msrp"/>
+<meta name="twitter:description" content="I have recently stumbled on video lectures for python&rsquo;s Jupyter library for data visualization on A Cloud Guru and decided to give it a try. I often wondered how the content in r/dataisbeautiful had been created, but also wanted to create and post interesting and meaningful insights from data.
+The course pointed me towards the pandas, matplotlib and seaborn library on python. Creating beautiful graphs was surprisingly easy on python. The course only scratched the surface when it came to the possibilities of those libraries, but did mention kaggle as a resource."/>
+
+
+
+
+<meta property="article:published_time" content="2020-07-04 16:24:16 -0700 PDT" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home</span>
+            <span class="logo__cursor" style="background:#51fec9;"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://luongs.github.io/about">About</a></li><li><a href="http://luongs.github.io/posts">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="http://luongs.github.io/posts/jupyter-for-car-msrp/">Jupyter for Car Msrp</a></h1>
+
+            
+
+            <div class="post-content">
+                <p>I have recently stumbled on video lectures for python&rsquo;s Jupyter library for
+data visualization on <a href="https://acloud.guru/learn/introduction-to-jupyter-notebooks">A Cloud Guru</a> and decided to give it a try.
+I often wondered how the content in <a href="https://www.reddit.com/r/dataisbeautiful/">r/dataisbeautiful</a> had been created, but also
+wanted to create and post interesting and meaningful insights from data.</p>
+
+<p>The course pointed me towards the pandas, matplotlib and seaborn library on
+python. Creating beautiful graphs was surprisingly easy on python. The course
+only scratched the surface when it came to the possibilities of those libraries,
+but did mention kaggle as a resource.</p>
+
+<p><a href="https://www.kaggle.com/">Kaggle</a> provides an interactive environment, more learning resources and user
+submitted data sets sourced from different parts of the internet either provided
+by open data or scraped from websites. I found the free interactive tutorials on
+<a href="https://www.kaggle.com/learn/data-visualization">kaggle</a> more useful than the one at A Cloud Guru.</p>
+
+<p>I had recently been doing research on cars and wanted to learn
+more about different car brands so I decided to try my hand with a data set on
+cars. Being able to visualize and manipulate
+data for specific or all car brands was very informative! Here is one of the
+more interesting graphs that I created from this dataset. It excludes the most
+expensive brand Bugatti as it was clearly an outlier with an average MSRP 3 times
+higher than the 2nd most expensive brand (1.75M compared to 546K). The code
+and a few other interesting graphs are in my <a href="https://www.kaggle.com/sebastienluong/2017-car-msrp">kaggle notebook</a></p>
+
+<p><img src="med_msrp.png" alt="2017_Car_Msrp" /></p>
+
+<p>Being able to build graphs and insights from data was really cool and I&rsquo;m
+planning to continue tinkering with python and pandas. Maybe with some
+visualization and interactivity with the bokeh library. My next project might
+also involve some scrapped data if it&rsquo;s not currently available from kaggle.
+I&rsquo;ll be posting interesting insights here or on kaggle.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="http://luongs.github.io/tags/python">python</a></span><span class="tag"><a href="http://luongs.github.io/tags/jupyter">jupyter</a></span><span class="tag"><a href="http://luongs.github.io/tags/pandas">pandas</a></span><span class="tag"><a href="http://luongs.github.io/tags/seaborn">seaborn</a></span><span class="tag"><a href="http://luongs.github.io/tags/matplotlib">matplotlib</a></span><span class="tag"><a href="http://luongs.github.io/tags/kaggle">kaggle</a></span><span class="tag"><a href="http://luongs.github.io/tags/data">data</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>298 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-07-04 16:24 -0700</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="http://luongs.github.io/posts/hello-world/">
+                                <span class="button__text">Hello World</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span><a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng">hello-friend-ng theme</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+
+
+
+    </body>
+</html>

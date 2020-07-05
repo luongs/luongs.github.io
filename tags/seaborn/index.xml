@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sebastien Luong</title>
-    <link>http://luongs.github.io/</link>
-    <description>Recent content on Sebastien Luong</description>
+    <title>Seaborn on Sebastien Luong</title>
+    <link>http://luongs.github.io/tags/seaborn/</link>
+    <description>Recent content in Seaborn on Sebastien Luong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 04 Jul 2020 16:24:16 -0700</lastBuildDate>
     
-	<atom:link href="http://luongs.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://luongs.github.io/tags/seaborn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,25 +19,6 @@
       <guid>http://luongs.github.io/posts/jupyter-for-car-msrp/</guid>
       <description>I have recently stumbled on video lectures for python&amp;rsquo;s Jupyter library for data visualization on A Cloud Guru and decided to give it a try. I often wondered how the content in r/dataisbeautiful had been created, but also wanted to create and post interesting and meaningful insights from data.
 The course pointed me towards the pandas, matplotlib and seaborn library on python. Creating beautiful graphs was surprisingly easy on python. The course only scratched the surface when it came to the possibilities of those libraries, but did mention kaggle as a resource.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>http://luongs.github.io/posts/hello-world/</link>
-      <pubDate>Wed, 22 May 2019 19:07:00 -0700</pubDate>
-      
-      <guid>http://luongs.github.io/posts/hello-world/</guid>
-      <description>First post using hugo, the theme&amp;rsquo;s looking great!</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://luongs.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://luongs.github.io/about/</guid>
-      <description>Hello! I am using this website to jot down some interesting thoughts, findings and experiments at work or on my free time.
-All opinions are my own.</description>
     </item>
     
   </channel>
